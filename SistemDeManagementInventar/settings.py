@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-3=_tggef-_-ai3o0uo4n5*n$4n24i*9^a#gs^mnwg*255aii!y
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["sistemmanagementinventarbackend.onrender.com", "127.0.0.1", "localhost"]
 
 
 # Application definition
