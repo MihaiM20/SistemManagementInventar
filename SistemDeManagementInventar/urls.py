@@ -69,8 +69,7 @@ router.register(
     basename="cerere_client"
 )
 router.register(
-    # ViewSet pentru date „de acasă” (dashboard, statistici etc.)
-    "api_acasa",
+    "acasa",                   # redenumeşti prefixul
     views.ApiAcasaViewSet,
     basename="api_acasa"
 )
