@@ -208,13 +208,15 @@ class BancaFurnizorViewSet(viewsets.ModelViewSet):
             response_dict = {'error': True, 'message': f'Eroare la actualizarea datelor: {str(e)}'}
             return Response(response_dict, status=status.HTTP_400_BAD_REQUEST)
 
-class ProdusViewSet(viewsets.ViewSet):
+class ProdusViewSet(viewsets.ModelViewSet):
     """
     Important: ViewSet custom pentru gestionarea produselor și a detaliilor lor
     Utilizează viewsets.ViewSet pentru implementare manuală a metodelor
     """
     authentication_classes = [JWTAuthentication]
     permission_classes = [IsAuthenticated]
+    queryset               = Produs.objects.all()
+    serializer_class       = ProdusSerializer
 
     def create(self, request):
         """
