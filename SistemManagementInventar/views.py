@@ -337,9 +337,11 @@ class ProdusViewSet(viewsets.ModelViewSet):
             return Response({'error': True, 'message': f'Eroare la actualizarea produsului: {str(e)}'}, status=status.HTTP_400_BAD_REQUEST)
 
 #cont furnizor viewset
-class ContFurnizorViewSet(viewsets.ViewSet):
+class ContFurnizorViewSet(viewsets.ModelViewSet):
     authentication_classes = [JWTAuthentication]
     permission_classes = [IsAuthenticated]
+    queryset               = ContFurnizor.objects.all()
+    serializer_class       = ContFurnizorSerializer
 
     def create(self, request):
         try:
