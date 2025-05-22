@@ -395,9 +395,11 @@ class ContFurnizorViewSet(viewsets.ModelViewSet):
 
 #view angajati
 
-class AngajatViewSet(viewsets.ViewSet):
+class AngajatViewSet(viewsets.ModelViewSet):
     authentication_classes = [JWTAuthentication]
     permission_classes     = [IsAuthenticated, EsteAdmin]  # doar admini pot crea/modifica
+    queryset               = Angajat.objects.all()
+    serializer_class       = AngajatSerializer
 
     def create(self, request):
         try:
