@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from .models import (
     Furnizor, BancaFurnizor, Produs, DetaliiProdus,
-    Factura, Admin, Angajat, Client, SalariuAngajat,
+    Factura, Angajat, Client, SalariuAngajat,
     DetaliiFactura, CerereClient, ContFurnizor, BancaAngajat
 )
 
@@ -78,15 +78,6 @@ class DetaliiProdusSerializerSimplu(serializers.ModelSerializer):
     class Meta:
         model = DetaliiProdus
         fields = "__all__"
-
-
-# Serializer pentru administrator:
-# - include toate câmpurile din modelul Admin
-class AdminSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Admin
-        fields = "__all__"
-
 
 # Serializer pentru angajat:
 # - include toate câmpurile din modelul Angajat

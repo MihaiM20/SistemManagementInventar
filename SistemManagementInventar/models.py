@@ -44,19 +44,6 @@ class DetaliiProdus(models.Model):
 
     objects = models.Manager()
 
-
-class Admin(models.Model):
-    id = models.AutoField(primary_key=True)
-    nume = models.CharField(max_length=255)
-    prenume = models.CharField(max_length=255)
-    email = models.CharField(max_length=255)
-    parola = models.CharField(max_length=255)
-    ultima_autentificare = models.DateTimeField(auto_now=True)
-    data_adaugare = models.DateTimeField(auto_now_add=True)
-
-    objects = models.Manager()
-
-
 class Angajat(AbstractUser):
     nume = models.CharField(max_length=255)
     prenume = models.CharField(max_length=255)
