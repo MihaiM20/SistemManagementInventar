@@ -1,4 +1,4 @@
-﻿[
+[
 {
   "model": "contenttypes.contenttype",
   "fields": {
@@ -144,10 +144,10 @@
   "pk": 1,
   "fields": {
     "nume": "CandyLand SRL",
-    "adresa": "Str. Gustului Dulce nr. 5, Sector 2, Bucure╚Öti",
+    "adresa": "Str. Gustului Dulce nr. 5, Sector 2, București",
     "nr_telefon": "+40 21 654 3210",
     "email": "vanzari@candyland.ro",
-    "descriere": "ΓÇ₧Oferim ciocolat─â de calitate superioar─â, cu re╚¢ete tradi╚¢ionale ╚Öi ambalaje personalizate.ΓÇ¥",
+    "descriere": "„Oferim ciocolată de calitate superioară, cu rețete tradiționale și ambalaje personalizate.”",
     "data_adaugare": "2025-05-20T14:09:10.971Z"
   }
 },
@@ -155,7 +155,7 @@
   "model": "SistemManagementInventar.produs",
   "pk": 1,
   "fields": {
-    "nume": "Macarons Ciocolat─â & Zmeur─â",
+    "nume": "Macarons Ciocolată & Zmeură",
     "tip_produs": "Desert / Macarons",
     "pret_cumparare": "4.00",
     "pret_vanzare": "6.00",
@@ -165,7 +165,7 @@
     "data_expirare": "2025-05-23",
     "data_producere": "2025-04-03",
     "id_furnizor": 1,
-    "descriere": "Macarons cu crem─â fin─â de ciocolat─â neagr─â ┼ƒi zmeur─â proasp─ât─â",
+    "descriere": "Macarons cu cremă fină de ciocolată neagră şi zmeură proaspătă",
     "stoc_total": 200,
     "cantitate_in_pachet": 6,
     "data_adaugare": "2025-05-20T14:16:39.121Z"
@@ -176,11 +176,11 @@
   "pk": 1,
   "fields": {
     "id_produs": 1,
-    "nume_atribut": "Arom─â",
-    "valoare_atribut": "Zmeur─â",
+    "nume_atribut": "Aromă",
+    "valoare_atribut": "Zmeură",
     "unitate_masura": "-",
     "data_adaugare": "2025-05-20T14:16:39.138Z",
-    "descriere": "Gust intens de zmeur─â natural─â"
+    "descriere": "Gust intens de zmeură naturală"
   }
 },
 {
@@ -192,7 +192,7 @@
     "valoare_atribut": "Da",
     "unitate_masura": "-",
     "data_adaugare": "2025-05-20T14:16:39.141Z",
-    "descriere": "Potrivit ╚Öi pentru persoanele cu intoleran╚¢─â la gluten"
+    "descriere": "Potrivit și pentru persoanele cu intoleranță la gluten"
   }
 },
 {
