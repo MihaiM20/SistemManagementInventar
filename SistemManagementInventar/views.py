@@ -824,17 +824,26 @@ class ApiAcasaViewSet(viewsets.ViewSet):
             lista_vanzare_diagrama.append({"data":data_acces,"suma":suma_vanzare_inner})
             lista_cumparare_diagrama.append({"data":data_acces,"suma":suma_cumparare_inner})
 
-
-        dict_response = {"error": False,"message":"Date pagina acasa", "cerere_client":len(cerere_client_serializer.data),
-                         "nr_facturi":len(nr_facturi_serializer.data),"total_produse":len(total_produse_serializer.data),
-                         "total_furnizori":len(total_furnizori_serializer.data), "total_angajati":len(total_angajati_serializer.data),
-                         "suma_vanzare":suma_vanzare, "suma_cumparare":suma_cumparare,"suma_profit":suma_profit,
-                         "cerere_client_asteptare":len(cerere_client_asteptare_serializer.data), "cerere_client_completate":len(cerere_client_completate_serializer.data),
-                         "suma_profit_azi":suma_profit_azi,"suma_vanzare_azi":suma_vanzare_azi,
-                         "data_produse_expirate_serializer":produse_expirate.count(),
-                         "diagrama_vanzari":lista_vanzare_diagrama,
-                         "diagrama_cumparare":lista_cumparare_diagrama,
-                         "diagrama_profit":lista_profit_diagrama}
+        dict_response = {
+            "error": False,
+            "message": "Date pagina acasa",
+            "cerere_client": len(cerere_client_serializer.data),
+            "nr_facturi": len(nr_facturi_serializer.data),
+            "total_produse": len(total_produse_serializer.data),
+            "total_furnizori": len(total_furnizori_serializer.data),
+            "total_angajati": len(total_angajati_serializer.data),
+            "suma_vanzare": f"{suma_vanzare:.2f}",
+            "suma_cumparare": f"{suma_cumparare:.2f}",
+            "suma_profit": f"{suma_profit:.2f}",
+            "cerere_client_asteptare": len(cerere_client_asteptare_serializer.data),
+            "cerere_client_completate": len(cerere_client_completate_serializer.data),
+            "suma_vanzare_azi": f"{suma_vanzare_azi:.2f}",
+            "suma_profit_azi": f"{suma_profit_azi:.2f}",
+            "data_produse_expirate_serializer": produse_expirate.count(),
+            "diagrama_vanzari": lista_vanzare_diagrama,
+            "diagrama_cumparare": lista_cumparare_diagrama,
+            "diagrama_profit": lista_profit_diagrama,
+        }
         return Response(dict_response)
 
 # Definirea endpoint-urilor
